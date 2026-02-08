@@ -12,14 +12,14 @@ Calculates monthly freelance income in USD and EUR, checks affodability for a ne
 3. Enter hours worked per week
 4. Get monthly income calculation and purchase eligibility 
 
-## Skills demonstrated
+### Skills demonstrated
 - User input and type conversion
 - Mathematical calculations
 - Conditional logic (if/else)
 - String formatting (f-strings)
 - Currency conversion
 
-## Example output
+### Example output
 ```
 === Freelance Earnings Calculator ===
 Your hourly rate (USD): $50
@@ -30,5 +30,5 @@ Monthly: $6000.00 (€5520.00)
 ✅ You qualify for a brand new Macbook Pro M5 16"!
 ```
 
-## Use case
+### Use case
 Built for freelancers pricing their services and planning to upgrade their device(s).
