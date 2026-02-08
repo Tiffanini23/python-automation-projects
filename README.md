@@ -1,13 +1,13 @@
-# python-automation-projects
+# Python Automation Projects
 Learning Python through building real automation tools.
 
-# Freelance Rate Calculator
+## Freelance Rate Calculator
 
 ## What it does
 Calculates monthly freelance income in USD and EUR, checks affodability for a new Macbook Pro M5 16" (€3500).
 
 ## How to use
-1. Run the script: `python rate_calculator.py`
+1. Run the script: `rate_calculator.py`
 2. Enter your hourly rate
 3. Enter hours worked per week
 4. Get monthly income calculation and purchase eligibility 
