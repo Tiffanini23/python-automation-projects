@@ -1,4 +1,4 @@
-#Workspace Booking Tracker 
+#Workspace Rate Tracker 
 members = ["Alice", "Thembi", "Langa", "Ayanda", "Michael"]
 hourly_rate = 1
 
