@@ -34,4 +34,4 @@ for i in   range (len(members)):
            tier = 'Bronze'
            discount = 0.05
 
-      print (f"{members[i]}: {tier} tier ({discount*100:.0f} % discount)") #f-string
+      print (f"{members[i]}: {tier} tier ({discount*100:.0f} % discount)") 
