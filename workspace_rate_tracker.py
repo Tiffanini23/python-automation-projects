@@ -20,4 +20,18 @@ print(f"\nTotal Revenue: ${total_revenue}")
 print(f"Total Member-Hours:{total_hours}")
 print(f"Average hours per member:{total_hours/len(members):.1f}")
     
-  
+#Loyalty Tier System 
+print('\n===Loyalty Tier System===')
+
+for i in   range (len(members)):
+      if   hours_booked[i] >= 9:
+           tier = 'Gold'
+           discount = 0.15
+      elif hours_booked[i] >= 6:
+           tier = 'Silver'
+           discount = 0.10
+      else:
+           tier = 'Bronze'
+           discount = 0.05
+
+      print (f"{members[i]}: {tier} tier ({discount*100:.0f} % discount)") #f-string
