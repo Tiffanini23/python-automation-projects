@@ -1,0 +1,61 @@
+"""
+Project: Workspace Revenue & Loyalty Tracker
+Description: Refactored code using functions to calculate revenue and tiers.
+"""
+
+# --- 1. SPECIALIST FUNCTIONS ---
+
+def calculate_revenue(hours, rate):
+    """Calculates revenue for a single member."""
+    return hours * rate
+
+def assign_tier(hours):
+    """Determines loyalty tier and discount based on hours booked."""
+    if hours >= 9:
+        return "Gold", 0.15
+    elif hours >= 6:
+        return "Silver", 0.10
+    else:
+        return "Bronze", 0.05
+
+# --- 2. MANAGER FUNCTION ---
+
+def generate_report(members, hours_booked):
+    """Processes all members and prints the final report summary."""
+    total_revenue = 0
+    base_rate = 10
+    
+    print("\n=== Loyalty & Revenue Report ===")
+    
+    for i in range(len(members)):
+        name = members[i]
+        hours = hours_booked[i]
+        
+        # Task: Flag members who haven't booked
+        if hours == 0:
+            print(f"{name}: No hours booked.")
+            continue
+            
+        # Get data from specialists
+        tier, discount = assign_tier(hours)
+        discounted_price = base_rate * (1 - discount)
+        
+        # Calculate individual revenue
+        revenue = calculate_revenue(hours, discounted_price)
+        total_revenue += revenue
+        
+        print(f"{name}: {hours} hrs | {tier} ({int(discount*100)}% disc) | ${revenue:.2f}")
+
+    # Task: Final totals and Revenue Warning
+    print("-" * 30)
+    print(f"Total Weekly Revenue: ${total_revenue:.2f}")
+    if total_revenue < 500:
+        print("⚠️ Revenue Warning: Below $500 goal")
+
+# --- 3. EXECUTION ---
+
+if __name__ == "__main__":
+    MEMBERS_LIST = ["Alice", "Thembi", "Langa", "Ayanda", "Michael"]
+    BOOKINGS_LIST = [4, 4, 6, 0, 9]
+
+    generate_report(MEMBERS_LIST, BOOKINGS_LIST)
