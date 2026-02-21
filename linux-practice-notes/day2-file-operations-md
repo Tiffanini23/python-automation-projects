@@ -1,0 +1,42 @@
+# Day 2: File Operations & Text Editing
+
+## Date Completed
+[Today's date]
+
+## Commands Practiced
+
+### Text Editing
+- nano members-list.txt - Created and edited file with nano editor
+- Ctrl+O - Saved file
+- Ctrl+X - Exited nano
+
+### File Viewing
+- cat members-list.txt - Viewed file contents
+
+### Searching
+- grep "Alice" members-list.txt - Searched for text in file
+- grep "Charlie" members-list.txt - Found specific names
+
+### File Operations
+- cp members-list.txt backup.txt - Copied file
+- mv backup.txt members-backup.txt - Renamed file
+- rm members-backup.txt - Deleted file
+
+### File Details
+- ls -la - Listed files with permissions and details
+
+## Key Learnings
+
+- Nano is a terminal text editor (no mouse!)
+- cat displays entire file contents
+- grep searches for text patterns
+- cp copies, mv moves/renames, rm deletes (permanently!)
+- File permissions show who can read/write/execute
+
+## Files Created
+
+- workspace/members/members-list.txt - List of 5 member names
+
+## Practice Notes
+
+Successfully created and edited a text file using only the terminal. Learned that Linux file deletion is permanent (no trash bin!). Understanding file permissions: rwx = read, write, execute.
